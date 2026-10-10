@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090d18"><meta name="description" content="АТЛАС — поиск ответов с полезными ссылками.">
+<title>АТЛАС — умный поиск</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">✳</span><span>АТЛАС</span></a><span class="top-note">Поиск ответов и источников</span></header>
+<main class="layout">
+<section class="hero"><div class="eyebrow">✦ УЗНАВАЙ НОВОЕ</div><h1>Что хочешь <span>узнать?</span></h1>
+<p class="subtitle">Задай вопрос — получи понятный ответ<br class="desktop-only"> и ссылки, чтобы узнать больше.</p>
+<form class="search-box" id="searchForm"><span class="search-icon">⌕</span><input id="question" name="query" type="search" placeholder="Например, почему небо голубое?" maxlength="500" required aria-label="Твой вопрос"><button id="searchButton" type="submit">Найти <span>→</span></button></form>
+<div class="suggestions"><button type="button" data-question="Почему небо голубое?">🌌 <span>Космос</span></button><button type="button" data-question="Как работает искусственный интеллект?">🤖 <span>Искусственный интеллект</span></button><button type="button" data-question="Кто открыл Америку?">🌍 <span>История</span></button></div></section>
+<div id="status" class="status" role="status" aria-live="polite">Напиши вопрос, чтобы начать поиск.</div>
+<section id="results" class="results hidden" aria-live="polite"><article class="result-card"><div class="card-title"><span class="card-icon">✦</span><h2>Ответ</h2></div><div id="answer" class="answer"></div></article><article id="sourcesCard" class="result-card"><div class="card-title"><span class="card-icon">↗</span><h2>Ссылки и источники</h2></div><div id="sources" class="source-list"></div></article></section>
+<div class="disclaimer">Проверяй важную информацию по первоисточникам.</div></main>
+<footer>АТЛАС <span>·</span> Ищи ответы, открывай новое</footer><script src="/app.js" defer></script>
+</body></html>
