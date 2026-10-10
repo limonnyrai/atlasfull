@@ -35,7 +35,7 @@ export default async (request) => {
     const sources = Array.isArray(list) ? list.slice(0,8).map(x => typeof x === "string" ? {url:x} : ({
       title:x.title || x.name || "", url:x.url || x.link || x.href || "",
       snippet:x.snippet || x.description || x.text || ""
-    })).filter(x => /^https?:\\/\\//i.test(x.url)) : [];
+    })).filter(x => /^https?:\/\//i.test(x.url))
     let finalAnswer = String(answer || "").trim();
     if (!finalAnswer && sources.length) finalAnswer = sources.map((x,i)=>`${i+1}. ${x.title || x.url}${x.snippet ? "\\n"+x.snippet : ""}\\n${x.url}`).join("\\n\\n");
     if (!finalAnswer) return reply({error:"Поисковый сервис не вернул текст ответа.",sources},502,headers);
